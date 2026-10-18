@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — OmniAI</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236366f1'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23090a0f'/><path d='M30 62 L50 30 L70 62' stroke='url(%23g)' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tw-compiled.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body class="bg-ink font-sans text-[15px]">
+  <div class="bg-glow" aria-hidden="true"></div>
+  <header class="site-nav fixed top-0 left-0 right-0 z-50">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="OmniAI home">
+        <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="rgba(139,92,246,.12)"/><path d="M30 62 L50 30 L70 62" stroke="url(#lg)" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="text-lg font-bold tracking-tight">Omni<span class="text-gradient">AI</span></span>
+      </a>
+      <div class="hidden items-center gap-1 md:flex">
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="playground.html" class="nav-link">Playground</a>
+        <a href="integrations.html" class="nav-link">Integrations</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="documentation.html" class="nav-link">Docs</a>
+      </div>
+      <div class="hidden items-center gap-3 md:flex">
+        <a href="auth-login.html" class="btn-ghost !px-5 !py-2.5 text-sm">Sign in</a>
+        <a href="auth-signup.html" class="btn-primary !px-5 !py-2.5 text-sm">Get Started</a>
+      </div>
+      <button class="glass grid h-10 w-10 place-items-center md:hidden" data-menu-toggle aria-expanded="false" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div class="mobile-menu md:hidden" data-mobile-menu>
+      <div class="glass mx-4 mb-4 flex flex-col gap-1 p-3">
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="playground.html" class="nav-link">Playground</a>
+        <a href="integrations.html" class="nav-link">Integrations</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="documentation.html" class="nav-link">Docs</a>
+        <a href="auth-login.html" class="btn-ghost mt-2 text-sm">Sign in</a>
+        <a href="auth-signup.html" class="btn-primary mt-2 text-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden pb-20 pt-36 lg:pt-44">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="section-badge reveal">Blog &amp; Insights</span>
+          <h1 class="reveal mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl">The OmniAI <span class="text-gradient">Journal</span></h1>
+          <p class="reveal mx-auto mt-5 max-w-lg text-muted">Engineering deep-dives, model comparisons, and practical guides for teams building with AI.</p>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal glass glass-hover group overflow-hidden" style="transition-delay:0ms">
+            <a href="blog-post.html" class="block">
+              <div class="post-card-img bg-gradient-to-br from-indigo-500 to-purple-600 relative grid place-items-center">
+                <svg width="52" height="52" viewBox="0 0 100 100" class="opacity-40 transition-transform duration-500 group-hover:scale-110" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(255,255,255,.1)"/><path d="M30 62 L50 30 L70 62" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="tag">Engineering</span>
+                <h3 class="mt-3.5 text-lg font-bold leading-snug transition-colors group-hover:text-violet-300">How Smart Routing Cuts AI Costs by 38%</h3>
+                <p class="mt-2.5 text-sm leading-relaxed text-muted">We benchmarked 12 models across 4 task types. Here is exactly how automatic routing beats manual selection on both cost and quality.</p>
+                <div class="mt-5 flex items-center gap-3 border-t border-white/5 pt-4">
+                  <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-indigo-500 text-xs font-bold text-white">SM</span>
+                  <div class="flex-1">
+                    <p class="text-[13px] font-semibold">Sarah Mitchell</p>
+                    <p class="text-xs text-muted">Sep 18, 2026 · 6 min read</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="reveal glass glass-hover group overflow-hidden" style="transition-delay:80ms">
+            <a href="blog-post.html" class="block">
+              <div class="post-card-img bg-gradient-to-br from-violet-500 to-indigo-600 relative grid place-items-center">
+                <svg width="52" height="52" viewBox="0 0 100 100" class="opacity-40 transition-transform duration-500 group-hover:scale-110" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(255,255,255,.1)"/><path d="M30 62 L50 30 L70 62" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="tag">Comparison</span>
+                <h3 class="mt-3.5 text-lg font-bold leading-snug transition-colors group-hover:text-violet-300">Claude 3.5 vs GPT-4o: A Developer's Field Guide</h3>
+                <p class="mt-2.5 text-sm leading-relaxed text-muted">Real prompts, real outputs. We put the two leading models head-to-head on coding, writing, and reasoning tasks.</p>
+                <div class="mt-5 flex items-center gap-3 border-t border-white/5 pt-4">
+                  <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-violet-500 text-xs font-bold text-white">DK</span>
+                  <div class="flex-1">
+                    <p class="text-[13px] font-semibold">David Kim</p>
+                    <p class="text-xs text-muted">Sep 12, 2026 · 9 min read</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="reveal glass glass-hover group overflow-hidden" style="transition-delay:160ms">
+            <a href="blog-post.html" class="block">
+              <div class="post-card-img bg-gradient-to-br from-purple-500 to-violet-600 relative grid place-items-center">
+                <svg width="52" height="52" viewBox="0 0 100 100" class="opacity-40 transition-transform duration-500 group-hover:scale-110" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(255,255,255,.1)"/><path d="M30 62 L50 30 L70 62" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="tag">Tutorials</span>
+                <h3 class="mt-3.5 text-lg font-bold leading-snug transition-colors group-hover:text-violet-300">Building Your First No-Code AI Workflow</h3>
+                <p class="mt-2.5 text-sm leading-relaxed text-muted">From trigger to action: automate a weekly report in 15 minutes using OmniAI's visual builder and 100+ integrations.</p>
+                <div class="mt-5 flex items-center gap-3 border-t border-white/5 pt-4">
+                  <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-purple-500 text-xs font-bold text-white">AR</span>
+                  <div class="flex-1">
+                    <p class="text-[13px] font-semibold">Amira Rahal</p>
+                    <p class="text-xs text-muted">Sep 5, 2026 · 7 min read</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="reveal glass glass-hover group overflow-hidden" style="transition-delay:240ms">
+            <a href="blog-post.html" class="block">
+              <div class="post-card-img bg-gradient-to-br from-indigo-500 to-violet-600 relative grid place-items-center">
+                <svg width="52" height="52" viewBox="0 0 100 100" class="opacity-40 transition-transform duration-500 group-hover:scale-110" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(255,255,255,.1)"/><path d="M30 62 L50 30 L70 62" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="tag">Engineering</span>
+                <h3 class="mt-3.5 text-lg font-bold leading-snug transition-colors group-hover:text-violet-300">The Complete Guide to Unified AI APIs</h3>
+                <p class="mt-2.5 text-sm leading-relaxed text-muted">Why teams are consolidating to a single OpenAI-compatible endpoint — and the architecture patterns that make it work.</p>
+                <div class="mt-5 flex items-center gap-3 border-t border-white/5 pt-4">
+                  <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-indigo-500 text-xs font-bold text-white">SM</span>
+                  <div class="flex-1">
+                    <p class="text-[13px] font-semibold">Sarah Mitchell</p>
+                    <p class="text-xs text-muted">Aug 28, 2026 · 11 min read</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="reveal glass glass-hover group overflow-hidden" style="transition-delay:320ms">
+            <a href="blog-post.html" class="block">
+              <div class="post-card-img bg-gradient-to-br from-violet-500 to-purple-600 relative grid place-items-center">
+                <svg width="52" height="52" viewBox="0 0 100 100" class="opacity-40 transition-transform duration-500 group-hover:scale-110" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(255,255,255,.1)"/><path d="M30 62 L50 30 L70 62" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="tag">Guides</span>
+                <h3 class="mt-3.5 text-lg font-bold leading-snug transition-colors group-hover:text-violet-300">5 Prompt Patterns That Actually Improve Output</h3>
+                <p class="mt-2.5 text-sm leading-relaxed text-muted">Chain-of-thought, few-shot, role framing — which techniques survive rigorous testing, and which are myths.</p>
+                <div class="mt-5 flex items-center gap-3 border-t border-white/5 pt-4">
+                  <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-violet-500 text-xs font-bold text-white">DK</span>
+                  <div class="flex-1">
+                    <p class="text-[13px] font-semibold">David Kim</p>
+                    <p class="text-xs text-muted">Aug 20, 2026 · 8 min read</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="reveal glass glass-hover group overflow-hidden" style="transition-delay:400ms">
+            <a href="blog-post.html" class="block">
+              <div class="post-card-img bg-gradient-to-br from-purple-500 to-indigo-600 relative grid place-items-center">
+                <svg width="52" height="52" viewBox="0 0 100 100" class="opacity-40 transition-transform duration-500 group-hover:scale-110" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(255,255,255,.1)"/><path d="M30 62 L50 30 L70 62" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="p-6">
+                <span class="tag">Product</span>
+                <h3 class="mt-3.5 text-lg font-bold leading-snug transition-colors group-hover:text-violet-300">OmniAI 2.0: What's New in the Biggest Release Yet</h3>
+                <p class="mt-2.5 text-sm leading-relaxed text-muted">40+ models, sub-100ms edge routing, budget guards, and a rebuilt visual workflow builder. Full changelog inside.</p>
+                <div class="mt-5 flex items-center gap-3 border-t border-white/5 pt-4">
+                  <span class="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-purple-500 text-xs font-bold text-white">AR</span>
+                  <div class="flex-1">
+                    <p class="text-[13px] font-semibold">Amira Rahal</p>
+                    <p class="text-xs text-muted">Aug 14, 2026 · 5 min read</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <!-- Newsletter -->
+        <div class="reveal glass relative mt-16 overflow-hidden p-10 text-center sm:p-14">
+          <div class="absolute -top-20 left-1/2 h-52 w-[30rem] -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" aria-hidden="true"></div>
+          <h2 class="relative text-2xl font-bold sm:text-3xl">Never miss an <span class="text-gradient">insight</span></h2>
+          <p class="relative mx-auto mt-3 max-w-md text-sm text-muted">One email per week. Model news, benchmarks, and tutorials — no spam, ever.</p>
+          <form class="relative mx-auto mt-7 flex max-w-md flex-col gap-3 sm:flex-row" data-validate data-success="You are subscribed! Welcome aboard." novalidate>
+            <input type="email" name="email" class="field flex-1" placeholder="you@company.com" autocomplete="email" required aria-label="Email address">
+            <button type="submit" class="btn-primary !py-3">Subscribe</button>
+            <p class="form-msg sm:absolute sm:-bottom-7 sm:left-1">Please enter a valid email address.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-white/5 py-12">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-5 sm:flex-row lg:px-8">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="OmniAI home">
+        <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(139,92,246,.12)"/><path d="M30 62 L50 30 L70 62" stroke="#a78bfa" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="font-bold">Omni<span class="text-gradient">AI</span></span>
+      </a>
+      <nav class="flex flex-wrap justify-center gap-6 text-sm text-muted" aria-label="Footer navigation">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+        <a href="documentation.html" class="hover:text-white transition-colors">Docs</a>
+      </nav>
+      <p class="text-sm text-muted">© 2026 OmniAI</p>
+    </div>
+  </footer>
+  <button class="back-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+  <script src="assets/js/main.min.js"></script>
+</body>
+</html>

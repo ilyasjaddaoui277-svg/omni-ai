@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing — OmniAI</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236366f1'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23090a0f'/><path d='M30 62 L50 30 L70 62' stroke='url(%23g)' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tw-compiled.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body class="bg-ink font-sans text-[15px]">
+  <div class="bg-glow" aria-hidden="true"></div>
+  <aside class="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col border-r border-white/5 bg-[#0b0d15]/80 backdrop-blur-xl lg:flex" aria-label="Dashboard sidebar">
+    <div class="flex h-16 items-center gap-2.5 border-b border-white/5 px-6">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(139,92,246,.12)"/><path d="M30 62 L50 30 L70 62" stroke="#a78bfa" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="text-lg font-bold">Omni<span class="text-gradient">AI</span></span>
+    </div>
+    <nav class="flex-1 space-y-1.5 p-4" aria-label="Dashboard navigation">
+      <a href="dashboard.html" class="sidebar-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Overview</a>
+      <a href="dashboard-billing.html" class="sidebar-link active" aria-current="page"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Billing</a>
+      <a href="index.html" class="sidebar-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>Back to site</a>
+    </nav>
+  </aside>
+  <div class="lg:pl-64">
+    <header class="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-white/5 bg-[#090a0f]/80 px-5 backdrop-blur-xl lg:px-8">
+      <h1 class="text-[15px] font-bold">Billing &amp; Plans</h1>
+      <span class="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-sm font-bold text-white">AC</span>
+    </header>
+    <main class="p-5 lg:p-8">
+      <section class="grid gap-6 xl:grid-cols-2">
+        <!-- Current plan -->
+        <article class="glass relative overflow-hidden p-7">
+          <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-violet-500/15 blur-3xl" aria-hidden="true"></div>
+          <div class="relative">
+            <div class="flex items-center justify-between">
+              <h2 class="font-bold">Current plan</h2>
+              <span class="rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 px-3.5 py-1 text-xs font-bold text-white">PRO</span>
+            </div>
+            <p class="mt-5 text-4xl font-extrabold tracking-tight">$49<span class="text-base font-medium text-muted">/month</span></p>
+            <p class="mt-1.5 text-sm text-muted">Renews October 1, 2026 · Visa ending in 4242</p>
+            <div class="mt-6 space-y-3 text-sm text-slate-300">
+              <div class="flex justify-between"><span>Generations</span><span class="text-muted">Unlimited</span></div>
+              <div class="flex justify-between"><span>Active workflows</span><span class="text-muted">18 / 50</span></div>
+              <div class="flex justify-between"><span>Team seats</span><span class="text-muted">8 / 10</span></div>
+            </div>
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+              <button class="btn-primary flex-1 !py-3 text-sm" data-toast="Redirecting to checkout…">Upgrade to Scale</button>
+              <button class="btn-ghost flex-1 !py-3 text-sm" data-toast="Plan management coming soon in this demo.">Manage plan</button>
+            </div>
+          </div>
+        </article>
+        <!-- Payment method -->
+        <article class="glass p-7">
+          <h2 class="font-bold">Payment method</h2>
+          <div class="mt-5 flex items-center gap-4 rounded-xl border border-white/8 bg-white/[.03] p-5">
+            <div class="flex h-11 w-16 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500/25 to-purple-500/25">
+              <svg width="30" height="20" viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="24" rx="4" fill="none" stroke="rgba(255,255,255,.35)"/><text x="18" y="16" text-anchor="middle" font-size="8" font-weight="bold" fill="#c4b5fd" font-family="Inter,sans-serif">VISA</text></svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-sm font-semibold">Visa ···· 4242</p>
+              <p class="text-xs text-muted">Expires 09/28</p>
+            </div>
+            <span class="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-400">Default</span>
+          </div>
+          <button class="btn-ghost mt-4 w-full !py-3 text-sm" data-toast="Card editor opened (demo).">+ Add payment method</button>
+          <div class="mt-6 rounded-xl border border-amber-500/25 bg-amber-500/8 p-4">
+            <p class="text-sm font-semibold text-amber-300">Credit balance: $23.40</p>
+            <p class="text-xs text-amber-200/70">Left over from a downgraded seat. Applies to your next invoice automatically.</p>
+          </div>
+        </article>
+      </section>
+      <!-- Invoices -->
+      <section class="glass mt-6 overflow-hidden">
+        <div class="p-6 pb-4"><h2 class="font-bold">Invoice history</h2><p class="text-xs text-muted">Download or email any past invoice</p></div>
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[560px] text-left text-sm">
+            <thead><tr class="border-y border-white/5 text-[11px] uppercase tracking-wider text-muted">
+              <th scope="col" class="px-6 py-3 font-semibold">Invoice</th><th scope="col" class="px-6 py-3 font-semibold">Date</th><th scope="col" class="px-6 py-3 font-semibold">Amount</th><th scope="col" class="px-6 py-3 font-semibold">Status</th><th scope="col" class="px-6 py-3 font-semibold"></th>
+            </tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/[.03] transition-colors"><td class="px-6 py-4 font-semibold text-slate-200">INV-2026-091</td><td class="px-6 py-4 text-muted">Sep 1, 2026</td><td class="px-6 py-4 text-slate-200">$49.00</td><td class="px-6 py-4"><span class="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-xs font-bold text-emerald-400">Paid</span></td><td class="px-6 py-4"><button class="text-xs font-semibold text-violet-300 hover:text-violet-200" data-toast="Invoice downloaded (demo).">PDF ↓</button></td></tr>
+              <tr class="hover:bg-white/[.03] transition-colors"><td class="px-6 py-4 font-semibold text-slate-200">INV-2026-082</td><td class="px-6 py-4 text-muted">Aug 1, 2026</td><td class="px-6 py-4 text-slate-200">$49.00</td><td class="px-6 py-4"><span class="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-xs font-bold text-emerald-400">Paid</span></td><td class="px-6 py-4"><button class="text-xs font-semibold text-violet-300 hover:text-violet-200" data-toast="Invoice downloaded (demo).">PDF ↓</button></td></tr>
+              <tr class="hover:bg-white/[.03] transition-colors"><td class="px-6 py-4 font-semibold text-slate-200">INV-2026-071</td><td class="px-6 py-4 text-muted">Jul 1, 2026</td><td class="px-6 py-4 text-slate-200">$49.00</td><td class="px-6 py-4"><span class="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-xs font-bold text-emerald-400">Paid</span></td><td class="px-6 py-4"><button class="text-xs font-semibold text-violet-300 hover:text-violet-200" data-toast="Invoice downloaded (demo).">PDF ↓</button></td></tr>
+              <tr class="hover:bg-white/[.03] transition-colors"><td class="px-6 py-4 font-semibold text-slate-200">INV-2026-063</td><td class="px-6 py-4 text-muted">Jun 1, 2026</td><td class="px-6 py-4 text-slate-200">$19.00</td><td class="px-6 py-4"><span class="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-xs font-bold text-emerald-400">Paid</span></td><td class="px-6 py-4"><button class="text-xs font-semibold text-violet-300 hover:text-violet-200" data-toast="Invoice downloaded (demo).">PDF ↓</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/main.min.js"></script>
+</body>
+</html>

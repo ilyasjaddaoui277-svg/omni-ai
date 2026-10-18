@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — OmniAI</title>
+  <meta name="description" content="OmniAI template documentation — file structure, customization, and component guide for buyers.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236366f1'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23090a0f'/><path d='M30 62 L50 30 L70 62' stroke='url(%23g)' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tw-compiled.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body class="bg-ink font-sans text-[15px]">
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="site-nav sticky top-0 z-50">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="OmniAI home">
+        <svg width="32" height="32" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(139,92,246,.12)"/><path d="M30 62 L50 30 L70 62" stroke="#a78bfa" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="text-lg font-bold">Omni<span class="text-gradient">AI</span> <span class="ml-1 rounded-md bg-white/5 px-2 py-0.5 text-[11px] font-semibold text-muted">Docs</span></span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="btn-ghost hidden !px-5 !py-2.5 text-sm sm:inline-flex">Back to site</a>
+        <a href="auth-signup.html" class="btn-primary !px-5 !py-2.5 text-sm">Get started</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="lg:flex lg:gap-10">
+      <!-- Docs sidebar -->
+      <aside class="hidden w-56 shrink-0 py-10 lg:block" aria-label="Documentation navigation">
+        <nav class="sticky top-24 space-y-1">
+          <p class="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-muted">Guide</p>
+          <a href="#intro" class="doc-link">Introduction</a>
+          <a href="#structure" class="doc-link">File structure</a>
+          <a href="#setup" class="doc-link">Installation</a>
+          <a href="#colors" class="doc-link">Colors &amp; theme</a>
+          <a href="#components" class="doc-link">Components</a>
+          <a href="#customize" class="doc-link">Customization</a>
+                    <a href="#support" class="doc-link">Support &amp; credits</a>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <main class="max-w-3xl flex-1 py-10 lg:py-14">
+        <!-- Intro -->
+        <section id="intro" class="scroll-mt-24">
+          <span class="section-badge">v1.2 · HTML5 Template</span>
+          <h1 class="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl">OmniAI <span class="text-gradient">Documentation</span></h1>
+          <p class="mt-4 leading-relaxed text-muted">Thank you for purchasing OmniAI — a production-ready dark SaaS &amp; AI template. This guide covers everything you need to install, customize, and deploy the template. OmniAI ships with 13 fully-coded English pages — blog, contact, billing UI, error page, and validated forms.</p>
+          <div class="mt-8 grid gap-4 sm:grid-cols-3">
+            <div class="glass p-5"><p class="text-sm font-semibold">Pages included</p><p class="mt-1 text-2xl font-bold text-gradient">13</p></div>
+            <div class="glass p-5"><p class="text-sm font-semibold">Dependencies</p><p class="mt-1 text-2xl font-bold text-gradient">0</p></div>
+            <div class="glass p-5"><p class="text-sm font-semibold">Build tools</p><p class="mt-1 text-2xl font-bold text-gradient">None</p></div>
+          </div>
+        </section>
+
+        <!-- File structure -->
+        <section id="structure" class="mt-16 scroll-mt-24">
+          <h2 class="text-2xl font-bold tracking-tight">File structure</h2>
+          <p class="mt-3 text-muted">The template is organized into a flat, predictable structure:</p>
+          <pre class="doc-code mt-5">omniai/
+├── index.html            <span class="text-slate-500"># Landing page (typed hero, marquee)</span>
+├── about.html            <span class="text-slate-500"># About page</span>
+├── integrations.html     <span class="text-slate-500"># Integrations grid</span>
+├── playground.html       <span class="text-slate-500"># AI chat playground UI</span>
+├── dashboard.html        <span class="text-slate-500"># User dashboard UI</span>
+├── dashboard-billing.html<span class="text-slate-500"># Billing page UI</span>
+├── auth-login.html       <span class="text-slate-500"># Sign in page</span>
+├── auth-signup.html      <span class="text-slate-500"># Sign up page</span>
+├── blog.html             <span class="text-slate-500"># Blog grid</span>
+├── blog-post.html        <span class="text-slate-500"># Article page</span>
+├── contact.html          <span class="text-slate-500"># Contact page (validated form)</span>
+├── 404.html              <span class="text-slate-500"># Error page</span>
+├── documentation.html    <span class="text-slate-500"># This guide</span>
+└── assets/
+    ├── css/
+    │   └── style.css   <span class="text-slate-500"># Theme, components & utilities</span>
+    ├── js/
+    │   └── main.js     <span class="text-slate-500"># All interactivity (vanilla JS)</span>
+    └── img/            <span class="text-slate-500"># Place your images here</span></pre>
+        </section>
+
+        <!-- Setup -->
+        <section id="setup" class="mt-16 scroll-mt-24">
+          <h2 class="text-2xl font-bold tracking-tight">Installation</h2>
+          <p class="mt-3 text-muted">No build process is needed. Simply:</p>
+          <ol class="mt-5 list-decimal space-y-3 pl-5 text-slate-300 marker:text-violet-400">
+            <li>Extract the downloaded ZIP archive.</li>
+            <li>Upload the <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">omniai</code> folder to your web server or open <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">index.html</code> directly in a browser.</li>
+            <li>The Inter font loads via Google Fonts; all Tailwind utilities are pre-compiled to <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">assets/css/tw-compiled.min.css</code> — no build step, no framework CDN, works fully offline.</li>
+          </ol>
+          <div class="glass mt-6 border-l-2 !border-l-violet-500 p-5">
+            <p class="text-sm font-semibold">Production tip</p>
+            <p class="mt-1 text-sm leading-relaxed text-muted">For maximum performance in production, compile Tailwind with the official CLI and self-host the fonts — this removes all CDN dependencies and improves Core Web Vitals.</p>
+          </div>
+        </section>
+
+        <!-- Colors -->
+        <section id="colors" class="mt-16 scroll-mt-24">
+          <h2 class="text-2xl font-bold tracking-tight">Colors &amp; theme</h2>
+          <p class="mt-3 text-muted">OmniAI uses a permanent dark theme. Every color is defined as a CSS custom property at the top of <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">style.css</code>:</p>
+          <pre class="doc-code mt-5">:root {
+  --bg:            #090a0f;  <span class="text-slate-500">/* Page background      */</span>
+  --bg-soft:       #0d0f17;  <span class="text-slate-500">/* Elevated surfaces    */</span>
+  --panel:         rgba(255,255,255,0.04); <span class="text-slate-500">/* Glass fill  */</span>
+  --border:        rgba(255,255,255,0.08); <span class="text-slate-500">/* Glass border*/</span>
+  --indigo:        #6366f1;  <span class="text-slate-500">/* Primary accent       */</span>
+  --violet:        #8b5cf6;  <span class="text-slate-500">/* Secondary accent     */</span>
+  --purple:        #a855f7;  <span class="text-slate-500">/* Tertiary accent      */</span>
+  --text:          #e7e9f2;  <span class="text-slate-500">/* Primary text         */</span>
+  --muted:         #9aa0b4;  <span class="text-slate-500">/* Secondary text       */</span>
+}</pre>
+          <p class="mt-4 text-muted">To rebrand the template, change these nine variables — every component updates automatically. The Tailwind config in each page maps <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">ink</code> and <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">muted</code> to the same palette.</p>
+        </section>
+
+        <!-- Components -->
+        <section id="components" class="mt-16 scroll-mt-24">
+          <h2 class="text-2xl font-bold tracking-tight">Components</h2>
+          <p class="mt-3 text-muted">All components are CSS classes — no JS frameworks required. The most-used ones:</p>
+          <div class="mt-6 overflow-x-auto">
+            <table class="w-full min-w-[540px] text-left text-sm">
+              <thead>
+                <tr class="border-b border-white/8 text-[11px] uppercase tracking-wider text-muted">
+                  <th scope="col" class="py-3 pr-4 font-semibold">Class</th>
+                  <th scope="col" class="py-3 font-semibold">Purpose</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5 text-slate-300">
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.glass</code></td><td class="text-muted">Glassmorphism panel (blur + translucent border)</td></tr>
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.glass-hover</code></td><td class="text-muted">Adds lift + glow on hover</td></tr>
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.btn-primary</code></td><td class="text-muted">Gradient CTA button</td></tr>
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.btn-ghost</code></td><td class="text-muted">Secondary outline button</td></tr>
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.text-gradient</code></td><td class="text-muted">Indigo → violet gradient text</td></tr>
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.section-badge</code></td><td class="text-muted">Pill label above section titles</td></tr>
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.field</code></td><td class="text-muted">Styled form input</td></tr>
+                <tr><td class="py-3 pr-4"><code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">.reveal</code></td><td class="text-muted">Scroll-triggered fade-in animation</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="mt-10 text-lg font-bold">Interactive components (JS hooks)</h3>
+          <p class="mt-2 text-muted">Attach these data attributes and main.js handles the rest:</p>
+          <pre class="doc-code mt-5"><span class="text-slate-500">// Tabs</span>
+&lt;button data-tab-btn="models"&gt;…&lt;/button&gt;
+&lt;div data-tab-panel="models"&gt;…&lt;/div&gt;
+
+<span class="text-slate-500">// Accordion</span>
+&lt;div data-accordion&gt;
+  &lt;div class="acc-item"&gt;
+    &lt;button class="acc-btn"&gt;Question&lt;/button&gt;
+    &lt;div class="acc-body"&gt;&lt;div class="acc-body-inner"&gt;Answer&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<span class="text-slate-500">// Pricing toggle + animated counter</span>
+&lt;button class="switch" data-billing-switch&gt;&lt;/button&gt;
+&lt;span data-price data-monthly="49" data-annual="39"&gt;49&lt;/span&gt;
+&lt;span data-counter="48210"&gt;0&lt;/span&gt;</pre>
+        </section>
+
+        <!-- Customize -->
+        <section id="customize" class="mt-16 scroll-mt-24">
+          <h2 class="text-2xl font-bold tracking-tight">Customization</h2>
+          <div class="mt-6 space-y-5">
+            <div class="glass p-6">
+              <h3 class="font-bold">Change the accent color</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">Edit <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">--indigo</code>, <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">--violet</code> and <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">--purple</code> in <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">style.css</code>. Buttons, gradients, glows, and chart bars all derive from these three variables.</p>
+            </div>
+            <div class="glass p-6">
+              <h3 class="font-bold">Add a new page</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">Duplicate any existing HTML file, keep the <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">&lt;head&gt;</code> block, and replace the <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">&lt;main&gt;</code> content. All nav links, styles, and scripts will work immediately.</p>
+            </div>
+            <div class="glass p-6">
+              <h3 class="font-bold">Replace demo content</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">All avatars use gradient initial circles — swap them for real images via the <code class="rounded bg-white/5 px-1.5 py-0.5 text-[13px] text-violet-300">&lt;img&gt;</code> tag. The hero mockup, charts, and tables are pure CSS/HTML and fully editable.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Support -->
+        <section id="support" class="mt-16 scroll-mt-24">
+          <h2 class="text-2xl font-bold tracking-tight">Support &amp; credits</h2>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="glass glass-hover p-6">
+              <h3 class="font-bold">Need help?</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">Open a ticket through the ThemeForest item comments or the support email provided in your purchase receipt. We typically respond within 24 hours on business days.</p>
+            </div>
+            <div class="glass glass-hover p-6">
+              <h3 class="font-bold">Credits</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">Font: Inter (Google Fonts, SIL OFL) · Icons: inline SVG (free for commercial use) · Framework: Tailwind CSS (MIT). All demo imagery is generated in-code — no stock photos required.</p>
+            </div>
+          </div>
+          <div class="glass mt-8 p-8 text-center">
+            <h3 class="text-xl font-bold">Ready to launch?</h3>
+            <p class="mt-2 text-sm text-muted">Explore the live pages and start building.</p>
+            <div class="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+              <a href="index.html" class="btn-primary">View landing page</a>
+              <a href="dashboard.html" class="btn-ghost">View dashboard</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/main.min.js"></script>
+</body>
+</html>

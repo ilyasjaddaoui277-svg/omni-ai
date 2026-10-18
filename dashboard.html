@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — OmniAI</title>
+  <meta name="description" content="OmniAI user dashboard — overview, AI models, workflows, and billing at a glance.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236366f1'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23090a0f'/><path d='M30 62 L50 30 L70 62' stroke='url(%23g)' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tw-compiled.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body class="bg-ink font-sans text-[15px]">
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col border-r border-white/5 bg-[#0b0d15]/80 backdrop-blur-xl lg:flex" aria-label="Dashboard sidebar">
+    <div class="flex h-16 items-center gap-2.5 border-b border-white/5 px-6">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(139,92,246,.12)"/><path d="M30 62 L50 30 L70 62" stroke="#a78bfa" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="text-lg font-bold">Omni<span class="text-gradient">AI</span></span>
+    </div>
+    <nav class="flex-1 space-y-1.5 overflow-y-auto p-4" aria-label="Dashboard navigation">
+      <p class="px-3 pb-2 pt-1 text-[11px] font-semibold uppercase tracking-wider text-muted">Workspace</p>
+      <a href="dashboard.html" class="sidebar-link active" aria-current="page">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Overview
+      </a>
+      <a href="#" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/></svg>
+        AI Models
+      </a>
+      <a href="#" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5l3.5 8M17 7.5l-3.5 8M7.5 6h9"/></svg>
+        Workflows
+      </a>
+      <a href="#" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+        Billing
+      </a>
+      <p class="px-3 pb-2 pt-6 text-[11px] font-semibold uppercase tracking-wider text-muted">Account</p>
+      <a href="#" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+        Profile
+      </a>
+      <a href="#" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+        Back to site
+      </a>
+    </nav>
+    <!-- Usage meter -->
+    <div class="border-t border-white/5 p-4">
+      <div class="glass !rounded-xl p-4">
+        <div class="flex items-center justify-between text-xs">
+          <span class="font-semibold text-slate-200">API credits</span>
+          <span class="text-muted">6.8k / 10k</span>
+        </div>
+        <div class="mt-2.5 h-2 overflow-hidden rounded-full bg-white/5">
+          <div class="h-full w-[68%] rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+        </div>
+        <a href="index.html#pricing" class="mt-3 block text-center text-xs font-semibold text-violet-300 hover:text-violet-200 transition-colors">Upgrade plan →</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <div class="lg:pl-64">
+    <!-- Top header -->
+    <header class="sticky top-0 z-30 flex h-16 items-center justify-between gap-4 border-b border-white/5 bg-[#090a0f]/80 px-5 backdrop-blur-xl lg:px-8">
+      <div class="flex items-center gap-3">
+        <button class="glass grid h-10 w-10 place-items-center lg:hidden" data-menu-toggle aria-expanded="false" aria-label="Toggle menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <div>
+          <h1 class="text-[15px] font-bold">Good morning, Alex</h1>
+          <p class="text-xs text-muted">Here's what's happening across your workspace.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="hidden items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-3.5 py-1.5 text-xs font-semibold text-violet-300 sm:flex">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg>
+          Pro Plan · Renews Oct 1
+        </span>
+        <button class="glass relative grid h-10 w-10 place-items-center" aria-label="Notifications">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="absolute right-2 top-2 h-2 w-2 rounded-full bg-violet-500"></span>
+        </button>
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-sm font-bold text-white" aria-label="Alex Carter">AC</span>
+      </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu lg:hidden" data-mobile-menu>
+      <div class="glass mx-4 mb-4 flex flex-col gap-1 p-3">
+        <a href="dashboard.html" class="nav-link active">Overview</a>
+        <a href="#" class="nav-link">AI Models</a>
+        <a href="#" class="nav-link">Workflows</a>
+        <a href="#" class="nav-link">Billing</a>
+        <a href="index.html" class="nav-link">Back to site</a>
+      </div>
+    </div>
+
+    <main class="p-5 lg:p-8">
+      <!-- Stat widgets -->
+      <section class="grid gap-5 sm:grid-cols-2 xl:grid-cols-4" aria-label="Performance overview">
+        <article class="glass glass-hover flex items-center gap-4 p-5">
+          <span class="widget-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.2 2.2M16.2 16.2l2.2 2.2M18.4 5.6l-2.2 2.2M7.8 16.2l-2.2 2.2"/><circle cx="12" cy="12" r="3.5"/></svg></span>
+          <div>
+            <p class="text-sm text-muted">Total generations</p>
+            <p class="mt-0.5 text-2xl font-bold tracking-tight" data-counter="48210">0</p>
+            <p class="mt-0.5 text-xs font-semibold text-emerald-400">▲ 12.4% this week</p>
+          </div>
+        </article>
+        <article class="glass glass-hover flex items-center gap-4 p-5">
+          <span class="widget-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7 7.5l3.5 8M17 7.5l-3.5 8M7.5 6h9"/></svg></span>
+          <div>
+            <p class="text-sm text-muted">Active workflows</p>
+            <p class="mt-0.5 text-2xl font-bold tracking-tight" data-counter="18">0</p>
+            <p class="mt-0.5 text-xs font-semibold text-emerald-400">▲ 3 new this month</p>
+          </div>
+        </article>
+        <article class="glass glass-hover flex items-center gap-4 p-5">
+          <span class="widget-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></span>
+          <div>
+            <p class="text-sm text-muted">API credits left</p>
+            <p class="mt-0.5 text-2xl font-bold tracking-tight">6.8k</p>
+            <p class="mt-0.5 text-xs font-semibold text-amber-400">68% of monthly quota</p>
+          </div>
+        </article>
+        <article class="glass glass-hover flex items-center gap-4 p-5">
+          <span class="widget-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-2.3C6.2 13.5 5 11.4 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6"/></svg></span>
+          <div>
+            <p class="text-sm text-muted">Models online</p>
+            <p class="mt-0.5 text-2xl font-bold tracking-tight">38<span class="text-base text-muted">/42</span></p>
+            <p class="mt-0.5 text-xs font-semibold text-muted">4 under maintenance</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Chart + Quick actions -->
+      <section class="mt-6 grid gap-6 xl:grid-cols-3">
+        <!-- Usage chart -->
+        <article class="glass p-6 xl:col-span-2">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="font-bold">Generation volume</h2>
+              <p class="text-xs text-muted">Requests routed via OmniAI · last 14 days</p>
+            </div>
+            <span class="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-muted">14 days</span>
+          </div>
+          <div class="mt-6 flex h-44 items-end gap-2 sm:gap-3" data-chart aria-label="Bar chart of generation volume">
+            <div class="chart-bar w-full" data-h="42" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="58" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="50" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="72" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="64" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="88" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="76" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="95" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="70" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="82" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="60" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="90" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="100" style="height:6%"></div>
+            <div class="chart-bar w-full" data-h="85" style="height:6%"></div>
+          </div>
+          <div class="mt-3 flex justify-between text-[10px] uppercase tracking-wide text-muted">
+            <span>Sep 8</span><span>Sep 15</span><span>Sep 22</span>
+          </div>
+        </article>
+
+        <!-- Quick actions -->
+        <article class="glass p-6">
+          <h2 class="font-bold">Quick actions</h2>
+          <p class="text-xs text-muted">Jump back into your work</p>
+          <div class="mt-5 space-y-3">
+            <a href="#" class="glass glass-hover flex items-center gap-3.5 !rounded-xl p-4">
+              <span class="widget-icon !h-10 !w-10"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+              <div><p class="text-sm font-semibold">New prompt</p><p class="text-xs text-muted">Chat with any model</p></div>
+            </a>
+            <a href="#" class="glass glass-hover flex items-center gap-3.5 !rounded-xl p-4">
+              <span class="widget-icon !h-10 !w-10"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></span>
+              <div><p class="text-sm font-semibold">Run workflow</p><p class="text-xs text-muted">Execute automation</p></div>
+            </a>
+            <a href="#" class="glass glass-hover flex items-center gap-3.5 !rounded-xl p-4">
+              <span class="widget-icon !h-10 !w-10"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span>
+              <div><p class="text-sm font-semibold">API keys</p><p class="text-xs text-muted">Manage access tokens</p></div>
+            </a>
+            <a href="index.html#pricing" class="btn-primary mt-2 w-full !py-3 text-sm">Upgrade to Scale</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Recent activity -->
+      <section class="glass mt-6 overflow-hidden">
+        <div class="flex items-center justify-between p-6 pb-4">
+          <div>
+            <h2 class="font-bold">Recent activity</h2>
+            <p class="text-xs text-muted">Latest generations across your workspace</p>
+          </div>
+          <a href="#" class="text-xs font-semibold text-violet-300 hover:text-violet-200 transition-colors">View all →</a>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full min-w-[640px] text-left text-sm">
+            <thead>
+              <tr class="border-y border-white/5 text-[11px] uppercase tracking-wider text-muted">
+                <th scope="col" class="px-6 py-3 font-semibold">Request</th>
+                <th scope="col" class="px-6 py-3 font-semibold">Model</th>
+                <th scope="col" class="px-6 py-3 font-semibold">Status</th>
+                <th scope="col" class="px-6 py-3 font-semibold">Latency</th>
+                <th scope="col" class="px-6 py-3 font-semibold">Time</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="transition-colors hover:bg-white/[.03]">
+                <td class="px-6 py-4 text-slate-300">Summarize Q3 investor call transcript</td>
+                <td class="px-6 py-4"><span class="rounded-md bg-indigo-500/15 px-2 py-0.5 text-xs font-semibold text-indigo-300">GPT-4o</span></td>
+                <td class="px-6 py-4"><span class="flex items-center gap-1.5 text-xs font-semibold text-emerald-400"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Success</span></td>
+                <td class="px-6 py-4 text-muted">0.9s</td>
+                <td class="px-6 py-4 text-muted">2 min ago</td>
+              </tr>
+              <tr class="transition-colors hover:bg-white/[.03]">
+                <td class="px-6 py-4 text-slate-300">Generate hero image — nebula theme</td>
+                <td class="px-6 py-4"><span class="rounded-md bg-purple-500/15 px-2 py-0.5 text-xs font-semibold text-purple-300">Flux Pro</span></td>
+                <td class="px-6 py-4"><span class="flex items-center gap-1.5 text-xs font-semibold text-emerald-400"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Success</span></td>
+                <td class="px-6 py-4 text-muted">3.4s</td>
+                <td class="px-6 py-4 text-muted">14 min ago</td>
+              </tr>
+              <tr class="transition-colors hover:bg-white/[.03]">
+                <td class="px-6 py-4 text-slate-300">Translate onboarding docs to FR / DE</td>
+                <td class="px-6 py-4"><span class="rounded-md bg-violet-500/15 px-2 py-0.5 text-xs font-semibold text-violet-300">Claude 3.5</span></td>
+                <td class="px-6 py-4"><span class="flex items-center gap-1.5 text-xs font-semibold text-emerald-400"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Success</span></td>
+                <td class="px-6 py-4 text-muted">1.2s</td>
+                <td class="px-6 py-4 text-muted">32 min ago</td>
+              </tr>
+              <tr class="transition-colors hover:bg-white/[.03]">
+                <td class="px-6 py-4 text-slate-300">Workflow · Weekly SEO report</td>
+                <td class="px-6 py-4"><span class="rounded-md bg-white/10 px-2 py-0.5 text-xs font-semibold text-slate-300">Auto-routed</span></td>
+                <td class="px-6 py-4"><span class="flex items-center gap-1.5 text-xs font-semibold text-amber-400"><span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span>Queued</span></td>
+                <td class="px-6 py-4 text-muted">—</td>
+                <td class="px-6 py-4 text-muted">1 hr ago</td>
+              </tr>
+              <tr class="transition-colors hover:bg-white/[.03]">
+                <td class="px-6 py-4 text-slate-300">Code review — payment module diff</td>
+                <td class="px-6 py-4"><span class="rounded-md bg-indigo-500/15 px-2 py-0.5 text-xs font-semibold text-indigo-300">GPT-4o</span></td>
+                <td class="px-6 py-4"><span class="flex items-center gap-1.5 text-xs font-semibold text-rose-400"><span class="h-1.5 w-1.5 rounded-full bg-rose-400"></span>Rate limited</span></td>
+                <td class="px-6 py-4 text-muted">—</td>
+                <td class="px-6 py-4 text-muted">2 hr ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/main.min.js"></script>
+</body>
+</html>

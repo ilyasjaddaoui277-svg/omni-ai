@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniAI — All-in-One AI Platform for Modern Teams</title>
+  <meta name="description" content="OmniAI unifies 40+ AI models, workflow automation, and API access in one sleek dark dashboard. Build, automate, and ship faster.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236366f1'/><stop offset='1' stop-color='%23a855f7'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23090a0f'/><path d='M30 62 L50 30 L70 62' stroke='url(%23g)' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OmniAI — All-in-One AI Platform for Modern Teams">
+  <meta property="og:description" content="Unify 40+ AI models, workflow automation, and API access in one sleek dark dashboard.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OmniAI — All-in-One AI Platform">
+  <meta name="twitter:description" content="Every AI model. One sleek workspace.">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"OmniAI","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"19","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"1240"}}
+  </script>
+  <!-- Tailwind CSS -->
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/tw-compiled.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body class="bg-ink font-sans text-[15px]">
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-nav fixed top-0 left-0 right-0 z-50">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="OmniAI home">
+        <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="rgba(139,92,246,.12)"/><path d="M30 62 L50 30 L70 62" stroke="url(#lg)" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="text-lg font-bold tracking-tight">Omni<span class="text-gradient">AI</span></span>
+      </a>
+      <div class="hidden items-center gap-1 md:flex">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="documentation.html" class="nav-link">Docs</a>
+      </div>
+      <div class="hidden items-center gap-3 md:flex">
+        <a href="auth-login.html" class="btn-ghost !px-5 !py-2.5 text-sm">Sign in</a>
+        <a href="auth-signup.html" class="btn-primary !px-5 !py-2.5 text-sm">Get Started</a>
+      </div>
+      <button class="glass grid h-10 w-10 place-items-center md:hidden" data-menu-toggle aria-expanded="false" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="mobile-menu md:hidden" data-mobile-menu>
+      <div class="glass mx-4 mb-4 flex flex-col gap-1 p-3">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="documentation.html" class="nav-link">Docs</a>
+        <a href="auth-login.html" class="btn-ghost mt-2 text-sm">Sign in</a>
+        <a href="auth-signup.html" class="btn-primary mt-2 text-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="relative overflow-hidden pt-36 pb-20 lg:pt-44 lg:pb-28">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-badge reveal">New · OmniAI 2.0 with 40+ models</span>
+          <h1 class="reveal mt-6 text-4xl font-extrabold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl">
+            Every AI model.<br><span class="text-gradient"><span data-typed data-typed-words="One sleek workspace.|One powerful API.|One subscription.">One sleek workspace.</span><span class="typed-cursor" aria-hidden="true">|</span></span>
+          </h1>
+          <p class="reveal mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            Stop juggling subscriptions. OmniAI unifies frontier language models, image generation, and workflow automation behind a single API and dashboard.
+          </p>
+          <div class="reveal mt-9 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
+            <a href="auth-signup.html" class="btn-primary w-full sm:w-auto">Start free trial
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="dashboard.html" class="btn-ghost w-full sm:w-auto">View live demo</a>
+          </div>
+          <!-- Stats -->
+          <div class="reveal mx-auto mt-14 grid max-w-lg grid-cols-3 gap-4">
+            <div class="glass glass-hover p-4">
+              <p class="text-2xl font-bold" data-counter="40" data-suffix="+">0</p>
+              <p class="mt-1 text-xs text-muted">AI models</p>
+            </div>
+            <div class="glass glass-hover p-4">
+              <p class="text-2xl font-bold" data-counter="12000" data-suffix="+">0</p>
+              <p class="mt-1 text-xs text-muted">Teams onboard</p>
+            </div>
+            <div class="glass glass-hover p-4">
+              <p class="text-2xl font-bold" data-counter="99" data-suffix=".9%">0</p>
+              <p class="mt-1 text-xs text-muted">Uptime SLA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero mockup -->
+        <div class="reveal relative mx-auto mt-16 max-w-4xl">
+          <div class="absolute -inset-8 rounded-[32px] bg-gradient-to-r from-indigo-500/15 via-violet-500/10 to-purple-500/15 blur-3xl" aria-hidden="true"></div>
+          <div class="glass animate-float relative overflow-hidden !rounded-2xl p-1.5">
+            <div class="rounded-xl bg-[#0b0d15] p-5 sm:p-7">
+              <!-- window bar -->
+              <div class="mb-6 flex items-center justify-between">
+                <div class="flex gap-1.5" aria-hidden="true">
+                  <span class="h-3 w-3 rounded-full bg-[#ff5f57]"></span>
+                  <span class="h-3 w-3 rounded-full bg-[#febc2e]"></span>
+                  <span class="h-3 w-3 rounded-full bg-[#28c840]"></span>
+                </div>
+                <span class="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] font-medium text-muted">
+                  <span class="live-dot h-1.5 w-1.5 rounded-full bg-emerald-400"></span> All systems operational
+                </span>
+              </div>
+              <div class="grid gap-5 sm:grid-cols-5">
+                <!-- prompt box -->
+                <div class="glass !rounded-xl p-4 sm:col-span-3">
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-muted">Prompt</p>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-300">Draft a product launch email for our new AI analytics suite, confident tone, under 120 words.</p>
+                  <div class="mt-4 flex items-center justify-between">
+                    <div class="flex gap-1.5">
+                      <span class="rounded-md bg-indigo-500/15 px-2 py-0.5 text-[10px] font-semibold text-indigo-300">GPT-4o</span>
+                      <span class="rounded-md bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold text-violet-300">Claude 3.5</span>
+                    </div>
+                    <span class="rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 px-3 py-1 text-[11px] font-semibold text-white">Run</span>
+                  </div>
+                </div>
+                <!-- output box -->
+                <div class="glass !rounded-xl p-4 sm:col-span-2">
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-muted">Output</p>
+                  <div class="mt-3 space-y-2" aria-hidden="true">
+                    <div class="h-2 w-full rounded bg-white/10"></div>
+                    <div class="h-2 w-11/12 rounded bg-white/10"></div>
+                    <div class="h-2 w-4/5 rounded bg-white/10"></div>
+                    <div class="h-2 w-full rounded bg-gradient-to-r from-indigo-500/40 to-purple-500/40"></div>
+                    <div class="h-2 w-3/5 rounded bg-white/10"></div>
+                    <div class="h-2 w-5/6 rounded bg-white/10"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- mini chart -->
+              <div class="mt-5 flex h-20 items-end gap-2 sm:gap-3" aria-hidden="true">
+                <div class="mock-bar w-full rounded-t bg-indigo-500/60" style="height:45%; animation-delay:.1s"></div>
+                <div class="mock-bar w-full rounded-t bg-violet-500/60" style="height:70%; animation-delay:.2s"></div>
+                <div class="mock-bar w-full rounded-t bg-purple-500/60" style="height:55%; animation-delay:.3s"></div>
+                <div class="mock-bar w-full rounded-t bg-indigo-500/60" style="height:90%; animation-delay:.4s"></div>
+                <div class="mock-bar w-full rounded-t bg-violet-500/60" style="height:62%; animation-delay:.5s"></div>
+                <div class="mock-bar w-full rounded-t bg-purple-500/60" style="height:78%; animation-delay:.6s"></div>
+                <div class="mock-bar w-full rounded-t bg-indigo-500/60" style="height:50%; animation-delay:.7s"></div>
+                <div class="mock-bar w-full rounded-t bg-violet-500/60" style="height:85%; animation-delay:.8s"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo strip -->
+        <div class="reveal mx-auto mt-16 max-w-3xl">
+          <p class="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted">Trusted by teams at</p>
+          <div class="marquee mt-6 opacity-50">
+            <div class="marquee-track"><p class="text-lg font-bold text-slate-400">Nexus</p><p class="text-lg font-bold text-slate-400">Quantix</p><p class="text-lg font-bold text-slate-400">Halovue</p><p class="text-lg font-bold text-slate-400">Stratos</p><p class="text-lg font-bold text-slate-400">Brightly</p><p class="text-lg font-bold text-slate-400">Vektor</p><p class="text-lg font-bold text-slate-400">Nexus</p><p class="text-lg font-bold text-slate-400">Quantix</p><p class="text-lg font-bold text-slate-400">Halovue</p><p class="text-lg font-bold text-slate-400">Stratos</p><p class="text-lg font-bold text-slate-400">Brightly</p><p class="text-lg font-bold text-slate-400">Vektor</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES / TABS ================= -->
+    <section id="features" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="section-badge reveal">Capabilities</span>
+          <h2 class="reveal mt-5 text-3xl font-bold tracking-tight sm:text-4xl">Built for the way <span class="text-gradient">modern teams ship</span></h2>
+          <p class="reveal mt-4 text-muted">Three pillars, one platform. Explore what OmniAI can do for your workflow.</p>
+        </div>
+
+        <div class="reveal mt-12 flex justify-start gap-2 overflow-x-auto pb-2 sm:justify-center" role="tablist" aria-label="Feature categories">
+          <button class="tab-btn active" data-tab-btn="models" role="tab" aria-selected="true">Multi-Model Access</button>
+          <button class="tab-btn" data-tab-btn="automation" role="tab" aria-selected="false">Workflow Automation</button>
+          <button class="tab-btn" data-tab-btn="api" role="tab" aria-selected="false">Unified API</button>
+        </div>
+
+        <div class="mt-10">
+          <!-- Panel: Models -->
+          <div class="tab-panel active items-center gap-10 lg:grid-cols-2" data-tab-panel="models" role="tabpanel">
+            <div>
+              <h3 class="text-2xl font-bold">40+ frontier models, one subscription</h3>
+              <p class="mt-4 leading-relaxed text-muted">Switch between GPT-4o, Claude 3.5, Gemini, Llama, and specialist models instantly. Route each request to the best model for the job — automatically.</p>
+              <ul class="mt-6 space-y-3.5">
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">Smart routing</strong> — picks the optimal model per task.</span></li>
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">Side-by-side compare</strong> — run prompts on multiple models at once.</span></li>
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">Usage analytics</strong> — cost and quality insights per model.</span></li>
+              </ul>
+            </div>
+            <div class="glass glass-hover grid grid-cols-2 gap-4 p-6">
+              <div class="glass !rounded-xl p-4 text-center"><p class="text-sm font-semibold">GPT-4o</p><p class="mt-1 text-[11px] text-emerald-400">● Online</p></div>
+              <div class="glass !rounded-xl p-4 text-center"><p class="text-sm font-semibold">Claude 3.5</p><p class="mt-1 text-emerald-400 text-[11px]">● Online</p></div>
+              <div class="glass !rounded-xl p-4 text-center"><p class="text-sm font-semibold">Gemini 2.0</p><p class="mt-1 text-emerald-400 text-[11px]">● Online</p></div>
+              <div class="glass !rounded-xl p-4 text-center"><p class="text-sm font-semibold">Llama 3.3</p><p class="mt-1 text-emerald-400 text-[11px]">● Online</p></div>
+              <div class="glass !rounded-xl p-4 text-center"><p class="text-sm font-semibold">Mistral Large</p><p class="mt-1 text-amber-400 text-[11px]">● Busy</p></div>
+              <div class="glass !rounded-xl p-4 text-center"><p class="text-sm font-semibold">+35 more</p><p class="mt-1 text-muted text-[11px]">Explore →</p></div>
+            </div>
+          </div>
+
+          <!-- Panel: Automation -->
+          <div class="tab-panel items-center gap-10 lg:grid-cols-2" data-tab-panel="automation" role="tabpanel">
+            <div>
+              <h3 class="text-2xl font-bold">Automations that work while you sleep</h3>
+              <p class="mt-4 leading-relaxed text-muted">Chain models, tools, and webhooks into visual workflows. Trigger on schedules, events, or incoming data — no code required.</p>
+              <ul class="mt-6 space-y-3.5">
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">Visual builder</strong> — drag, drop, connect. Done.</span></li>
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">100+ integrations</strong> — Slack, Notion, Sheets, CRMs and more.</span></li>
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">Human-in-the-loop</strong> — approval gates where it matters.</span></li>
+              </ul>
+            </div>
+            <div class="glass glass-hover space-y-3 p-6">
+              <div class="flex items-center gap-3 glass !rounded-xl p-3.5"><span class="h-2.5 w-2.5 rounded-full bg-indigo-400"></span><p class="text-sm">Trigger · New email received</p></div>
+              <div class="ml-5 h-5 w-px bg-gradient-to-b from-indigo-500 to-violet-500" aria-hidden="true"></div>
+              <div class="flex items-center gap-3 glass !rounded-xl p-3.5"><span class="h-2.5 w-2.5 rounded-full bg-violet-400"></span><p class="text-sm">AI · Classify &amp; summarize content</p></div>
+              <div class="ml-5 h-5 w-px bg-gradient-to-b from-violet-500 to-purple-500" aria-hidden="true"></div>
+              <div class="flex items-center gap-3 glass !rounded-xl p-3.5"><span class="h-2.5 w-2.5 rounded-full bg-purple-400"></span><p class="text-sm">Action · Post summary to Slack #inbox</p></div>
+            </div>
+          </div>
+
+          <!-- Panel: API -->
+          <div class="tab-panel items-center gap-10 lg:grid-cols-2" data-tab-panel="api" role="tabpanel">
+            <div>
+              <h3 class="text-2xl font-bold">One API key. Every model.</h3>
+              <p class="mt-4 leading-relaxed text-muted">Integrate once and access the entire model catalog through a single OpenAI-compatible endpoint. Automatic failover, load balancing, and spend controls included.</p>
+              <ul class="mt-6 space-y-3.5">
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">OpenAI-compatible</strong> — drop-in SDK replacement.</span></li>
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">Sub-100ms routing</strong> — global edge inference.</span></li>
+                <li class="flex gap-3"><svg class="mt-0.5 shrink-0 text-violet-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong class="font-semibold text-slate-200">Budget guards</strong> — hard limits per key, per team.</span></li>
+              </ul>
+            </div>
+            <div class="glass glass-hover p-6">
+              <div class="mb-4 flex gap-1.5" aria-hidden="true">
+                <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-[#28c840]"></span>
+              </div>
+              <pre class="overflow-x-auto text-[13px] leading-relaxed text-slate-300"><code><span class="text-violet-400">const</span> omni = <span class="text-indigo-400">require</span>(<span class="text-emerald-300">"omniai"</span>)(process.env.OMNI_KEY);
+
+<span class="text-violet-400">const</span> res = <span class="text-violet-400">await</span> omni.chat.create({
+  model: <span class="text-emerald-300">"auto"</span>, <span class="text-slate-500">// smart routing</span>
+  messages: [{ role: <span class="text-emerald-300">"user"</span>, content: prompt }]
+});</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORKFLOW ================= -->
+    <section id="workflow" class="relative py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="section-badge reveal">How it works</span>
+          <h2 class="reveal mt-5 text-3xl font-bold tracking-tight sm:text-4xl">From idea to output <span class="text-gradient">in three steps</span></h2>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <article class="reveal glass glass-hover relative p-7">
+            <span class="absolute -top-4 left-7 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-3.5 py-1.5 text-sm font-bold text-white shadow-lg shadow-violet-500/30">01</span>
+            <h3 class="mt-3 text-lg font-bold">Connect your stack</h3>
+            <p class="mt-3 leading-relaxed text-muted text-[14.5px]">Plug in your tools, data sources, and model providers in minutes with guided setup and pre-built connectors.</p>
+          </article>
+          <article class="reveal glass glass-hover relative p-7">
+            <span class="absolute -top-4 left-7 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-3.5 py-1.5 text-sm font-bold text-white shadow-lg shadow-violet-500/30">02</span>
+            <h3 class="mt-3 text-lg font-bold">Design the workflow</h3>
+            <p class="mt-3 leading-relaxed text-muted text-[14.5px]">Compose prompts, automations, and approval steps on a visual canvas. Preview outputs live before publishing.</p>
+          </article>
+          <article class="reveal glass glass-hover relative p-7">
+            <span class="absolute -top-4 left-7 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 px-3.5 py-1.5 text-sm font-bold text-white shadow-lg shadow-violet-500/30">03</span>
+            <h3 class="mt-3 text-lg font-bold">Ship &amp; scale</h3>
+            <p class="mt-3 leading-relaxed text-muted text-[14.5px]">Deploy to production with one click. Monitor quality, latency, and spend from a single observability dashboard.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section id="pricing" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="section-badge reveal">Pricing</span>
+          <h2 class="reveal mt-5 text-3xl font-bold tracking-tight sm:text-4xl">Simple pricing, <span class="text-gradient">serious power</span></h2>
+          <div class="reveal mt-8 flex items-center justify-center gap-4">
+            <span class="text-sm font-medium text-slate-300">Monthly</span>
+            <button class="switch" data-billing-switch role="switch" aria-checked="false" aria-label="Toggle annual billing"></button>
+            <span class="text-sm font-medium text-slate-300">Annual <span class="save-pill ml-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[11px] font-bold text-emerald-400">Save 20%</span></span>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <!-- Starter -->
+          <article class="reveal glass glass-hover flex flex-col p-8">
+            <h3 class="text-lg font-bold">Starter</h3>
+            <p class="mt-1.5 text-sm text-muted">For individuals exploring AI.</p>
+            <p class="mt-6 flex items-end gap-1.5"><span class="text-5xl font-extrabold tracking-tight">$<span data-price data-monthly="19" data-annual="15">19</span></span><span class="mb-1.5 text-sm text-muted" data-period>/month</span></p>
+            <ul class="mt-7 flex-1 space-y-3 text-sm text-slate-300">
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>5 AI models</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>10k generations / month</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>2 active workflows</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Community support</li>
+            </ul>
+            <a href="auth-signup.html" class="btn-ghost mt-8 w-full">Choose Starter</a>
+          </article>
+
+          <!-- Pro (featured) -->
+          <article class="reveal relative flex flex-col rounded-2xl border border-violet-500/40 bg-gradient-to-b from-violet-500/10 to-indigo-500/5 p-8 backdrop-blur-xl">
+            <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-1 text-xs font-bold text-white shadow-lg shadow-violet-500/40">Most Popular</span>
+            <h3 class="text-lg font-bold">Pro</h3>
+            <p class="mt-1.5 text-sm text-muted">For teams shipping AI features.</p>
+            <p class="mt-6 flex items-end gap-1.5"><span class="text-5xl font-extrabold tracking-tight">$<span data-price data-monthly="49" data-annual="39">49</span></span><span class="mb-1.5 text-sm text-muted" data-period>/month</span></p>
+            <ul class="mt-7 flex-1 space-y-3 text-sm text-slate-200">
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>All 40+ AI models</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Unlimited generations</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>50 active workflows</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Unified API + failover</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Priority support (4h)</li>
+            </ul>
+            <a href="auth-signup.html" class="btn-primary mt-8 w-full">Choose Pro</a>
+          </article>
+
+          <!-- Enterprise -->
+          <article class="reveal glass glass-hover flex flex-col p-8">
+            <h3 class="text-lg font-bold">Enterprise</h3>
+            <p class="mt-1.5 text-sm text-muted">For organizations at scale.</p>
+            <p class="mt-6 flex items-end gap-1.5"><span class="text-5xl font-extrabold tracking-tight">$<span data-price data-monthly="199" data-annual="159">199</span></span><span class="mb-1.5 text-sm text-muted" data-period>/month</span></p>
+            <ul class="mt-7 flex-1 space-y-3 text-sm text-slate-300">
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Everything in Pro</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>SSO / SAML + audit logs</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Dedicated infrastructure</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>99.9% uptime SLA</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 shrink-0 text-violet-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Dedicated success manager</li>
+            </ul>
+            <a href="auth-signup.html" class="btn-ghost mt-8 w-full">Contact sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="section-badge reveal">Testimonials</span>
+          <h2 class="reveal mt-5 text-3xl font-bold tracking-tight sm:text-4xl">Loved by builders <span class="text-gradient">everywhere</span></h2>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <figure class="reveal glass glass-hover p-7">
+            <div class="flex gap-1 text-violet-400" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote class="mt-4 leading-relaxed text-slate-300 text-[14.5px]">"We replaced four separate AI subscriptions with OmniAI. The unified API alone saved our team two weeks of integration work."</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-sm font-bold text-white">SM</span>
+              <div><p class="text-sm font-semibold">Sarah Mitchell</p><p class="text-xs text-muted">CTO · Quantix</p></div>
+            </figcaption>
+          </figure>
+          <figure class="reveal glass glass-hover p-7">
+            <div class="flex gap-1 text-violet-400" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote class="mt-4 leading-relaxed text-slate-300 text-[14.5px]">"The workflow builder is ridiculously good. Our content pipeline runs fully automated — from draft to publish — with human approval only on final review."</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-violet-500 to-purple-500 text-sm font-bold text-white">DK</span>
+              <div><p class="text-sm font-semibold">David Kim</p><p class="text-xs text-muted">Head of Product · Halovue</p></div>
+            </figcaption>
+          </figure>
+          <figure class="reveal glass glass-hover p-7">
+            <div class="flex gap-1 text-violet-400" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+            </div>
+            <blockquote class="mt-4 leading-relaxed text-slate-300 text-[14.5px]">"Smart routing cut our inference costs by 38% in the first month while improving output quality. The analytics dashboard makes it easy to prove ROI."</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 text-sm font-bold text-white">AR</span>
+              <div><p class="text-sm font-semibold">Amira Rahal</p><p class="text-xs text-muted">ML Lead · Stratos</p></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-3xl px-5 lg:px-8">
+        <div class="text-center">
+          <span class="section-badge reveal">FAQ</span>
+          <h2 class="reveal mt-5 text-3xl font-bold tracking-tight sm:text-4xl">Questions, <span class="text-gradient">answered</span></h2>
+        </div>
+        <div class="reveal mt-12 space-y-4" data-accordion>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">Which AI models are included?<span class="acc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-body"><div class="acc-body-inner">OmniAI provides access to 40+ frontier and open-source models including GPT-4o, Claude 3.5, Gemini, Llama, Mistral, and specialist models for vision, audio, and embeddings. New models are added within days of release.</div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">Is the API really OpenAI-compatible?<span class="acc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-body"><div class="acc-body-inner">Yes. Point your existing OpenAI SDK at OmniAI by changing the base URL and API key. All chat, streaming, embedding, and function-calling endpoints work out of the box.</div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">How does smart model routing work?<span class="acc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-body"><div class="acc-body-inner">Our router evaluates each request against model benchmarks, live latency, cost, and your quality preferences — then sends it to the best-performing model automatically. You can also pin specific models or set routing rules per project.</div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">Can I set spending limits?<span class="acc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-body"><div class="acc-body-inner">Absolutely. Configure hard monthly budgets per API key, per team, or per workflow. OmniAI enforces limits in real time and sends alerts at 50%, 80%, and 100% usage.</div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false">Is my data used for training?<span class="acc-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-body"><div class="acc-body-inner">Never. All plans include a zero-data-retention policy. Prompts and outputs are processed ephemerally and never stored or used for model training. Enterprise plans add regional data residency options.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="py-16">
+      <div class="mx-auto max-w-5xl px-5 lg:px-8">
+        <div class="reveal glass relative overflow-hidden p-10 text-center sm:p-16">
+          <div class="absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" aria-hidden="true"></div>
+          <h2 class="relative text-3xl font-bold tracking-tight sm:text-4xl">Ready to unify your AI stack?</h2>
+          <p class="relative mx-auto mt-4 max-w-md text-muted">Start your 14-day free trial. No credit card required. Cancel anytime.</p>
+          <div class="relative mt-8 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
+            <a href="auth-signup.html" class="btn-primary">Create free account</a>
+            <a href="documentation.html" class="btn-ghost">Read the docs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/5 py-14">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="grid gap-10 md:grid-cols-5">
+        <div class="md:col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="OmniAI home">
+            <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="24" fill="rgba(139,92,246,.12)"/><path d="M30 62 L50 30 L70 62" stroke="#a78bfa" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="text-lg font-bold">Omni<span class="text-gradient">AI</span></span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">The all-in-one AI workspace for modern teams. Every model, every workflow, one platform.</p>
+        </div>
+        <nav aria-label="Product links">
+          <p class="text-sm font-semibold text-slate-200">Product</p>
+          <ul class="mt-4 space-y-2.5 text-sm text-muted">
+            <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+            <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+            <li><a href="dashboard.html" class="hover:text-white transition-colors">Live demo</a></li>
+            <li><a href="playground.html" class="hover:text-white transition-colors">Playground</a></li>
+            <li><a href="integrations.html" class="hover:text-white transition-colors">Integrations</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+            <li><a href="documentation.html" class="hover:text-white transition-colors">Documentation</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company links">
+          <p class="text-sm font-semibold text-slate-200">Company</p>
+          <ul class="mt-4 space-y-2.5 text-sm text-muted">
+            <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Legal links">
+          <p class="text-sm font-semibold text-slate-200">Legal</p>
+          <ul class="mt-4 space-y-2.5 text-sm text-muted">
+            <li><a href="#" class="hover:text-white transition-colors">Privacy policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Terms of service</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Security</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:flex-row">
+        <p class="text-sm text-muted">© 2026 OmniAI. All rights reserved.</p>
+        <p class="text-sm text-muted">Crafted with precision · Powered by 40+ models</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+  <script src="assets/js/main.min.js"></script>
+</body>
+</html>
